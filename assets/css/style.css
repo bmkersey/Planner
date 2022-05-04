@@ -70,3 +70,31 @@ textarea{
   font-size: 20px;
   transition: all .3s ease-in-out;
 }
+
+
+.container{
+  display: flex;
+  flex-direction: column;
+}
+
+#time{
+  border-top: 1px solid black;
+  border-right: 2px solid black;
+  border-bottom: 1px solid black;
+  height: 75px;
+  align-content: flex-end;
+}
+
+.row, #task, #save{
+  height: 75px;
+}
+
+#time p {
+  text-align: right;
+}
+
+#save i {
+  position:absolute;
+  top:45%;
+  left:45%;
+}
