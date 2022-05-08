@@ -2,7 +2,7 @@ var workDay =["9","10","11","12","13","14","15","16","17"]
 var dailyTasks= []
 var loadedTasks = []
 
-
+// a function that runs and checks the time of day against the task time rows
 var checkTime = function(){
     
     var currentTime = moment().format("k")
@@ -27,6 +27,8 @@ var checkTime = function(){
 
 }
 
+
+// this loads any tasks saved into local storage
 var loadTasks = function(){
     
     var loadedTasks = localStorage.getItem("tasks");
@@ -49,6 +51,8 @@ var loadTasks = function(){
 }
 
 
+
+//initial run function uses moment to grab the current date and print it to the top of the page then checks the time and loads tasks
 var getDateP = function(){
     var currentDate = moment().format("dddd, MMMM Do")
     
@@ -59,6 +63,7 @@ var getDateP = function(){
 
 }
 
+///simple save function
 var saveData = function(time){
     var taskText= $("#task" + time).text()
 
@@ -72,6 +77,8 @@ var saveData = function(time){
 
 }
 
+
+//event handler
 $(".container").click(function(event){
     var timePart = event.target.id
     var timePart = timePart.substring(4)
